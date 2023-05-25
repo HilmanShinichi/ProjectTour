@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url('https://fonts.google.com/specimen/Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 
 :root {
   --primary-color: #24bd10;
@@ -8,7 +10,7 @@
   --heading-color: #0b2727;
   --text-color: #6e7074;
   --font-name: "Montserrat", sans-serif;
-  --subtitle-font-name: "Island Moments", cursive;
+  --subtitle-font-name: "Satisfy", cursive;
 }
 
 * {
