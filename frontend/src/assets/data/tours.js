@@ -9,15 +9,15 @@ import tourImg07 from "../images/tour-img07.jpg";
 const tours = [
   {
     id: "01",
-    title: "Westminister Bridge",
-    city: "London",
+    title: "Kepulauan Derawan",
+    city: "Kalimantan Timur",
     distance: 300,
     price: 99,
     maxGroupSize: 10,
-    desc: "this is the description",
+    desc: "Di kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut yang diminati wisatawan mancanegara terutama para penyelam kelas dunia",
     reviews: [
       {
-        name: "jhon doe",
+        name: "ivan muhammad mufid",
         rating: 4.6,
       },
     ],
@@ -27,15 +27,15 @@ const tours = [
   },
   {
     id: "02",
-    title: "Bali, Indonesia",
-    city: "Indonesia",
+    title: "Danau Beratan",
+    city: "Bali",
     distance: 400,
     price: 99,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Danau Beratan sangat bagus dikunjungi oleh wisatawan yang bosan melihat pantai atau sekedar refreshing, bisa sewa boat mengelilingi danau",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Fauzan Musyafa",
         rating: 4.6,
       },
     ],
@@ -105,12 +105,11 @@ const tours = [
     price: 99,
     maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
-    ],
+    reviews: [{
+      name: "jhon doe",
+      rating: 4.6,
+    },
+  ],
     avgRating: 4.5,
     photo: tourImg06,
     featured: false,
@@ -128,6 +127,10 @@ const tours = [
         name: "jhon doe",
         rating: 4.6,
       },
+      {
+        name: "Andri",
+        rating: 5.0,
+      },
     ],
     avgRating: 4.5,
     photo: tourImg07,
@@ -141,12 +144,7 @@ const tours = [
     price: 99,
     maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
-    ],
+    reviews: [],
     avgRating: 4.5,
     photo: tourImg03,
     featured: false,

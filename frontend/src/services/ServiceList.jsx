@@ -25,14 +25,15 @@ const serviceData = [
 ]
 
 const ServiceList = () => {
-  return <>
-  {
-    serviceData.map((item, index)=> 
+  return (
+  <>
+  {serviceData.map((item, index)=> (
     <Col lg="3" key={index}>
     <ServiceCard item={item} />
-    </Col>)
-  }
+    </Col>
+    ))}
   </>
+  )
 }
 
 export default ServiceList
