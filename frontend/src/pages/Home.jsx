@@ -16,6 +16,11 @@ import SearchBar from "../shared/SearchBar";
 import ServiceList from "../services/ServiceList";
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 
+import MasonrylImagesGallery from "../components/Image-gallery/MasonrylImagesGallery";
+
+import Testimonial from "../components/Testimonial/Testimonial";
+import Newsletter from "../shared/Newsletter";
+
 const Home = () => {
   return ( 
     <>
@@ -39,7 +44,7 @@ const Home = () => {
 
             <Col lg='2'>
              <div className="hero__img-box">
-                <img src={heroImg} alt="" />
+                <img src={heroImg} alt=""/>
              </div>
             </Col>
             <Col lg='2'>
@@ -49,7 +54,7 @@ const Home = () => {
             </Col>
             <Col lg='2'>
              <div className="hero__img-box mt-5 ">
-                <img src={heroImg02} alt="" />
+                <img src={heroImg02} alt=""/>
              </div>
             </Col>
           </Row>
@@ -128,15 +133,36 @@ const Home = () => {
       <section>
       <Container>
         <Row>
-          <Col lg='12' className="bg-dark">
+          <Col lg='12'>
             <Subtitle subtitle={'Gallery'}/>
             <h2 className="gallery__title">Visit our costumers tour gallery</h2>
+          </Col>
+          <Col lg='12'>
+            <MasonrylImagesGallery/>
           </Col>
         </Row>
       </Container>
       </section>
 
       {/* ========== Gellery tour section end ==============*/}
+
+      {/* ========== Testimonial section start ==============*/}
+    <section>
+      <Container>
+      <Row>
+        <Col lg='12'>
+          <Subtitle subtitle={'Testimonial Tour'}/>
+          <h2 className="testimonial__title">What our fans say about us</h2>
+        </Col>
+        <Col lg='12'>
+          <Testimonial/>
+        </Col>
+      </Row>
+      </Container>
+    </section>
+
+      {/* ========== Testimonial section end ==============*/}
+      <Newsletter/>
     </>
   );
 };

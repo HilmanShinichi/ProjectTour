@@ -11,6 +11,7 @@
 
 .tour__img{
     position: relative;
+    transition: .4s;
 }
 
 .tour__img span {
@@ -24,6 +25,11 @@
     color: #fff;
     padding: 0.3rem 0.5rem;
     border-radius: 3px 0 0 0;
+   
+}
+
+.tour__img:hover{
+    transform: scale(1.1);
 }
 
 .card__top span i {

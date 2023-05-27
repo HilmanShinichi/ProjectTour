@@ -1,0 +1,9 @@
+.common__section {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../assets/images/tour.jpg") no-repeat center center;
+    background-size: cover;
+    height: 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
