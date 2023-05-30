@@ -5,6 +5,7 @@ import tourImg04 from "../images/tour-img04.jpg";
 import tourImg05 from "../images/tour-img05.jpg";
 import tourImg06 from "../images/tour-img06.jpg";
 import tourImg07 from "../images/tour-img07.jpg";
+import tourImg08 from "../images/tour-img08.jpg";
 
 const tours = [
   {
@@ -35,8 +36,8 @@ const tours = [
     title: "Danau Beratan",
     city: "Bali",
     distance: 400,
-    address: "Desa sugiri",
-    price: 99,
+    address: "kawasan Bedugul",
+    price: 900000,
     maxGroupSize: 8,
     desc: "Danau Beratan sangat bagus dikunjungi oleh wisatawan yang bosan melihat pantai atau sekedar refreshing, bisa sewa boat mengelilingi danau",
     reviews: [
@@ -51,16 +52,16 @@ const tours = [
   },
   {
     id: "03",
-    title: "Snowy Mountains, Thailand",
-    city: "Thailand",
+    title: "Gunung Rinjani",
+    city: "Lombok",
     distance: 500,
     address: "Desa sugiri",
-    price: 99,
+    price: 950000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Gunung Rinjani terkenal dengan pesona alamnya yang memiliki puncak bernama Puncak Dewi Anjani, dan danau kawah yang bernama Segara Anak",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Bayu",
         rating: 4.6,
       },
     ],
@@ -70,16 +71,16 @@ const tours = [
   },
   {
     id: "04",
-    title: "Beautiful Sunrise, Thailand",
-    city: "Thailand",
+    title: "Taman Nasional Bunaken",
+    city: "Sulawesi Utara",
     distance: 500,
-    address: "Desa sugiri",
-    price: 99,
+    address: "Manado",
+    price: 880000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Taman Nasional Bunaken adalah taman laut yang terletak di Sulawesi Utara, Indonesia. Taman ini terletak di Segitiga Terumbu Karang yang menjadi habitat bagi 390 spesies terumbu karang[2] dan juga berbagai spesies ikan, moluska, reptil, dan mamalia laut.",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Haikul",
         rating: 4.6,
       },
     ],
@@ -89,16 +90,16 @@ const tours = [
   },
   {
     id: "05",
-    title: "Nusa Pendia Bali, Indonesia",
-    city: "Indonesia",
+    title: "Nusa Penida",
+    city: "Bali",
     distance: 500,
-    address: "Desa sugiri",
-    price: 99,
+    address: "Klungkung",
+    price: 770000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Nusa Penida adalah sebuah pulau yang terletak di dekat pulau Bali tenggara Indonesia dan sebuah kabupaten di Kabupaten Klungkung yang mencakup pulau kecil tetangga Nusa Lembongan dan dua belas pulau yang lebih kecil lagi. Selat Badung memisahkan pulau dan Bali",
     reviews: [
       {
-        name: "jhon doe",
+        name: "Bima",
         rating: 4.6,
       },
     ],
@@ -108,15 +109,15 @@ const tours = [
   },
   {
     id: "06",
-    title: "Cherry Blossoms Spring",
-    city: "Japan",
+    title: "Wakatobi",
+    city: "Sulawesi Tenggara",
     distance: 500,
-    address: "Desa sugiri",
-    price: 99,
+    address: "Laut Banda",
+    price: 700000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Dengan luas mencapai 13.900 km2, tujuan wisata terkenal asal Indonesia ini memiliki tak kurang dari 112 jenis terumbu karang yang bersimbiosis dengan ikan-ikan bawah laut sehingga menciptakan panorama bawah laut yang tiada tanding",
     reviews: [{
-      name: "jhon doe",
+      name: "Lukas",
       rating: 4.6,
     },
   ],
@@ -126,13 +127,13 @@ const tours = [
   },
   {
     id: "07",
-    title: "Holmen Lofoten",
-    city: "France",
+    title: "Raja Ampat",
+    city: "Papua Barat",
     distance: 500,
-    address: "Desa sugiri",
-    price: 99,
+    address: "Waigeo",
+    price: 900000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Surga dunia di Indonesia selanjutnya adalah kepulauan Raja Ampat yang terletak di Papua Barat dengan kekayaan laut terlengkap di bumi.",
     reviews: [
       {
         name: "jhon doe",
@@ -149,16 +150,16 @@ const tours = [
   },
   {
     id: "08",
-    title: "Snowy Mountains, Thailand",
-    city: "Thailand",
+    title: "Candi Borobudur",
+    city: "Jawa Tengah",
     distance: 500,
-    address: "Desa sugiri",
-    price: 99,
+    address: "magelang",
+    price: 200000,
     maxGroupSize: 8,
-    desc: "this is the description",
+    desc: "Salah satu ikon wisata budaya Indonesia yang mendunia lainnya adalah Candi Borobudur. Sebagai candi Budha terbesar di dunia dengan luas tak kurang dari 123 X 123 meter, candi yang dibangun pada masa kerajaan Mataram kuno ini merupakan warisan budaya dan sejarah Indonesia yang terkenal akan arsitektur yang memukau",
     reviews: [],
     avgRating: 4.5,
-    photo: tourImg03,
+    photo: tourImg08,
     featured: false,
   },
 ];
