@@ -1,32 +1,32 @@
 [
   {
-    "title": "Westminister Bridge",
-    "city": "London",
-    "address": "Somewhere in London",
+    "title": "Kepulauan Derawan",
+    "city": "Kalimantan Timur",
+    "address": "Kabupaten Berau",
     "distance": 300,
-    "price": 99,
+    "price": 750000,
     "maxGroupSize": 10,
-    "desc": "this is the description",
+    "desc": "Di kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut yang diminati wisatawan mancanegara terutama para penyelam kelas dunia",
     "reviews": [],
 
     "photo": "/tour-images/tour-img01.jpg",
     "featured": true
   },
   {
-    "title": "Bali, Indonesia",
+    "title": "Danau Beratan",
     "city": "Bali",
-    "address": "Somewhere in Indonesia",
+    "address": "kawasan Bedugul",
     "distance": 400,
-    "price": 99,
+    "price": 900000,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Danau Beratan sangat bagus dikunjungi oleh wisatawan yang bosan melihat pantai atau sekedar refreshing, bisa sewa boat mengelilingi danau",
     "reviews": [],
 
     "photo": "/tour-images/tour-img02.jpg",
     "featured": true
   },
   {
-    "title": "Snowy Mountains, Thailand",
+    "title": "Gunung Rinjani",
     "city": "Bangkok",
     "address": "Somewhere in Thailand",
     "distance": 500,
