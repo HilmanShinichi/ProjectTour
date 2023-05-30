@@ -12,8 +12,8 @@ const tours = [
     title: "Kepulauan Derawan",
     city: "Kalimantan Timur",
     distance: 300,
-    address: "Desa sugiri",
-    price: 99,
+    address: "Kabupaten Berau",
+    price: 750000,
     maxGroupSize: 10,
     desc: "Di kepulauan ini terdapat sejumlah objek wisata bahari menawan, salah satunya Taman Bawah Laut yang diminati wisatawan mancanegara terutama para penyelam kelas dunia",
     reviews: [
