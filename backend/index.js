@@ -4,11 +4,19 @@ import cors from 'cors';
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 
-import tourRoute from './routes/tours.js'
+// panggil routes untuk fungsi callback
+import tourRoute from './routes/tours.js';
+import userRoute from './routes/users.js';
+import authRoute from './routes/auth.js';
+import reviewRoute from './routes/reviews.js';
 
 dotenv.config()
 const app = express()
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8000;
+const corsOptions = {
+    origin:true,
+    credentials:true
+}
 
 // 
 app.get('/', (req, res )=> {
@@ -31,9 +39,12 @@ const connect = async () => {
 
 // Midleware
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(cookieParser())
-app.use('/tours', tourRoute);
+app.use('/api/v1/auth', authRoute);
+app.use('/api/v1/tours', tourRoute);
+app.use('/api/v1/users', userRoute);
+app.use('/api/v1/review', reviewRoute);
 
 
 
