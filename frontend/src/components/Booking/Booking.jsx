@@ -1,38 +1,69 @@
-import React, {useState} from "react";
+import React, { useState, useContext } from "react";
 import "./booking.css";
 import { Form, FormGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
 
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { BASE_URL } from "../../utils/config";
 
 const Booking = ({ tour, avgRating }) => {
-  const { price, reviews } = tour;
-  const navigate = useNavigate()
+  const { price, reviews, title } = tour;
+  const navigate = useNavigate();
 
-  const [credentials, setCredentials] = useState({
-    userId:'01', //later it will be dynamic
-    userEmail:'example@gmail.com',
-    fullname:'',
-    phone:'',
-    guestSize:1,
-    bookAt:''
-  })
+  const { user } = useContext(AuthContext);
 
-// event untuk set credential saat submit booking
-const handleChange = e => {
-        setCredentials(prev=>({...prev,[e.target.id]:e.target.value}))
-};
+  const [booking, setBooking] = useState({
+    userId: user && user._id,
+    userEmail: user && user.email,
+    tourName: title,
+    fullName: "",
+    phone: "",
+    guestSize: 1,
+    bookAt: "",
+  });
 
-// unttuk mengatur penjumlahan total harga dan service fee
-const serviceFee = 25000
-const totalAmount = Number(price) * Number(credentials.guestSize) + Number(serviceFee)
+  // event untuk set credential saat submit booking
+  const handleChange = async (e) => {
+    setBooking((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
 
+  // unttuk mengatur penjumlahan total harga dan service fee
+  const serviceFee = 25000;
+  const totalAmount =
+    Number(price) * Number(booking.guestSize) + Number(serviceFee);
 
-// send data to the server
-const handleClick = e => {
-    e.preventDefault()
+  // send data to the server
+  const handleClick = async (e) => {
+    e.preventDefault();
 
-    navigate('/thank-you')
-}
+    console.log(booking);
+
+    try {
+      if (!user || user === undefined || user === null) {
+        return alert("Please sign in");
+      }
+
+      const res = await fetch(`${BASE_URL}/booking`, {
+        method: "post",
+        headers: {
+          "content-type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(booking),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        return alert(result.message);
+      }
+      navigate("/thank-you");
+    } catch (error) {
+      alert(error.message);
+    }
+
+    navigate("/thank-you");
+  };
 
   return (
     <div className="booking">
@@ -54,7 +85,7 @@ const handleClick = e => {
             <input
               type="text"
               placeholder="Full Name"
-              id="fullname"
+              id="fullName"
               required
               onChange={handleChange}
             />
@@ -90,22 +121,26 @@ const handleClick = e => {
 
       {/* ========== booking bottom =============*/}
       <div className="booking__bottom">
-<ListGroup>
-    <ListGroupItem className="border-0 px-0">
-            <h5 className="d-flex align-content-center gap-1">Rp {price} <i className="ri-close-line"></i> 1 person</h5>
+        <ListGroup>
+          <ListGroupItem className="border-0 px-0">
+            <h5 className="d-flex align-content-center gap-1">
+              Rp {price} <i className="ri-close-line"></i> 1 person
+            </h5>
             <span> Rp {price}</span>
-    </ListGroupItem>
-    <ListGroupItem className="border-0 px-0">
+          </ListGroupItem>
+          <ListGroupItem className="border-0 px-0">
             <h5>Service charge</h5>
             <span> Rp {serviceFee}</span>
-    </ListGroupItem>
-    <ListGroupItem className="border-0 px-0">
+          </ListGroupItem>
+          <ListGroupItem className="border-0 px-0">
             <h5>Total</h5>
             <span> Rp {totalAmount}</span>
-    </ListGroupItem>
-</ListGroup>
+          </ListGroupItem>
+        </ListGroup>
 
-<button className="btn primary__btn w-100 mt-4" onClick={handleClick}>Book Now</button>
+        <Button className="btn primary__btn w-100 mt-4" onClick={handleClick}>
+          Book Now
+        </Button>
       </div>
     </div>
   );
