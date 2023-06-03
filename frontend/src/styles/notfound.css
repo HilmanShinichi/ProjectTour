@@ -1,0 +1,19 @@
+.notfound__wrap-error {
+    background-color: #667bf2;
+    background-image: url("https://cdn.pixabay.com/photo/2017/07/27/18/45/view-2546328_1280.png");
+    background-attachment: fixed;
+    background-size: cover;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  .notfound__wrap-error h1 {
+    font-size: 6.875rem;
+    letter-spacing: -13px;
+    line-height: 1;
+    font-family: montserrat, sans-serif;
+  }
+  .notfound__span h1 span {
+    text-shadow: -8px 0 0 rgb(102 123 242);
+  }
+  .text-9xl {
+    font-size: 5.5rem;
+  }

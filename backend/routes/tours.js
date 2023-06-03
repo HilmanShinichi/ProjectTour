@@ -12,7 +12,6 @@ import {
 import { verifyAdmin, } from "../utils/verifyToken.js";
 
 const router = express.Router();
-
 // create new tour
 router.post("/", verifyAdmin, createTour);
 

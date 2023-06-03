@@ -62,8 +62,8 @@ export const login = async (req, res) => {
         });
     };
 
-    const {password, role, ...rest} = user._doc
-
+    const {password,  ...rest} = user._doc
+  
     // buat jwt token
     const token = jwt.sign({
         id:user._id,
@@ -81,7 +81,6 @@ export const login = async (req, res) => {
         data:'successfully login', data:{
             ...rest
         },
-        role,
     });
 
       

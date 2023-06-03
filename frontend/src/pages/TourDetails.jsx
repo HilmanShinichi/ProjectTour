@@ -51,7 +51,7 @@ function TourDetails() {
         username: user?.username,
         reviewText,
         rating: tourRating,
-      };
+      }; 
 
       const res = await fetch(`${BASE_URL}/review/${id}`, {
         method: "post",
