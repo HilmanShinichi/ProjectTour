@@ -8,6 +8,7 @@ import Booking from "../components/Booking/Booking";
 import Newsletter from "../shared/Newsletter";
 import useFetch from "./../hooks/useFetch";
 import { BASE_URL } from "./../utils/config";
+import rupiah from "../utils/rupiah";
 
 import { AuthContext } from "./../context/AuthContext";
 
@@ -118,7 +119,7 @@ function TourDetails() {
                       </span>
                       <span>
                         <i className="ri-money-dollar-circle-line">
-                          Rp {price} / per Person
+                          {rupiah(price)} / per Person
                         </i>
                       </span>
                       <span>

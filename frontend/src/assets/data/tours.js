@@ -53,9 +53,9 @@ const tours = [
   {
     id: "03",
     title: "Gunung Rinjani",
-    city: "Lombok",
+    city: "Nusa Tenggara Barat",
     distance: 500,
-    address: "Desa sugiri",
+    address: "Lombok",
     price: 950000,
     maxGroupSize: 8,
     desc: "Gunung Rinjani terkenal dengan pesona alamnya yang memiliki puncak bernama Puncak Dewi Anjani, dan danau kawah yang bernama Segara Anak",

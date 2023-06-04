@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 import calculatingAvgRating from '../utils/avgRating';
+import rupiah from '../utils/rupiah';
 
 import './tour-card.css';
 
@@ -9,6 +10,8 @@ import './tour-card.css';
 const TourCard = ({tour}) => {
  
     const {_id, city, title, photo, price, featured, reviews } = tour 
+
+   
 
     const {totalRating, avgRating} = calculatingAvgRating(reviews)
 
@@ -32,7 +35,7 @@ const TourCard = ({tour}) => {
             <h5 className="tour__title"><Link to={`/tours/${_id}`}>{title}</Link></h5>
 
             <div className='card__bottom d-flex align-items-center justify-content-between mt-3'>
-                <h5>Rp {price} <span> /per person</span>
+                <h5>{rupiah(price)} <span> /per person</span>
                 </h5>
 
                 <button className="btn booking__btn">

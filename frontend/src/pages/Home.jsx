@@ -34,7 +34,7 @@ const Home = () => {
                   <Subtitle subtitle={"Know Before You Go"} />
                   <img src={worldImg} alt="" />
                 </div>
-                <h1>Traveling opens the door to creating {" "} <span className="highlight"> memories</span>
+                <h1>Traveling opens the door to creating<span className="highlight"> memories</span>
                 </h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rerum sunt dolores cum optio quas, deleniti pariatur eveniet nemo blanditiis in, obcaecati vel dolor natus animi tenetur veritatis veniam illum!

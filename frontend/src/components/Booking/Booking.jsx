@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { BASE_URL } from "../../utils/config";
 
+import rupiah from "../../utils/rupiah";
+
 const Booking = ({ tour, avgRating }) => {
   const { price, reviews, title } = tour;
   const navigate = useNavigate();
@@ -69,7 +71,7 @@ const Booking = ({ tour, avgRating }) => {
     <div className="booking">
       <div className="booking__top d-flex align-items-center justify-content-between">
         <h3>
-          Rp {price} <span>/per Person</span>
+          {rupiah(price)} <span>/per Person</span>
         </h3>
         <span className="tour__rating d-flex align-items-center">
           <i className="ri-star-s-fill"></i>{" "}

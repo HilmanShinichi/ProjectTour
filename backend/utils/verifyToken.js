@@ -40,7 +40,7 @@ export const verifyUser = (req, res, next) => {
 
 export const verifyAdmin = (req, res, next) => {
   verifyToken(req, res, next, () => {
-    if (req.body.role === "admin") {
+    if (req.body.role === 'admin') {
     next();
     } else {
       return res.status(401).json({

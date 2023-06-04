@@ -1,13 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Button } from "reactstrap";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 
 import { BASE_URL } from "../../utils/config";
 
-const AddTour = () => {
+const EditTour = () => {
  
     const { user } = useContext(AuthContext);
  
@@ -21,15 +21,34 @@ const AddTour = () => {
   const [maxGroupSize, setMaxGroupSize] = useState("");
 
   const navigate = useNavigate();
+  const {id} = useParams()
 
-  const handleSubmit = async (e) => {
+useEffect(() => {
+  getToursById();
+},[]);
+
+  const getToursById = async()=>{
+    const res = await axios.get(`${BASE_URL}/tours/${id}`)
+    setTitle(res.data.data.title)
+    setCity(res.data.data.city)
+    console.log(res.data.data.city)
+    setAddress(res.data.data.address)
+    setDistance(res.data.data.distance)
+    setPhoto(res.data.data.photo)
+    setDesc(res.data.data.desc)
+    setPrice(res.data.data.price)
+    setMaxGroupSize(res.data.data.maxGroupSize
+      )
+  }
+
+  const handleSubmitUpdate = async (e) => {
     e.preventDefault();
     try {
         if (!user || user === undefined || user === null) {
             alert("Please sign in");
             navigate("/login");
           }else{
-            await axios.post(`${BASE_URL}/tours`, {
+            await axios.put(`${BASE_URL}/tours/${id}`, {
               title,
               city,
               address,
@@ -54,7 +73,7 @@ const AddTour = () => {
 
   return (
     <div className="container ">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmitUpdate}>
         <div class="mb-3">
           <label for="" class="form-label">
             Title
@@ -152,11 +171,11 @@ const AddTour = () => {
           />
         </div>
         <Button type="submit" className="btn primary__btn bg-info ">
-          Save
+          Update
         </Button>
       </form>
     </div>
   );
 };
 
-export default AddTour;
+export default EditTour;

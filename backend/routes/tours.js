@@ -9,7 +9,7 @@ import {
   getFeaturedTour,
   getTourCount,
 } from "../controllers/tourControllers.js";
-import { verifyAdmin, } from "../utils/verifyToken.js";
+import { verifyAdmin, verifyUser, } from "../utils/verifyToken.js";
 
 const router = express.Router();
 // create new tour

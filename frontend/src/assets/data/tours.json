@@ -27,25 +27,25 @@
   },
   {
     "title": "Gunung Rinjani",
-    "city": "Bangkok",
-    "address": "Somewhere in Thailand",
+    "city": "Nusa Tenggara Barat",
+    "address": "Lombok",
     "distance": 500,
-    "price": 99,
+    "price": 950000,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Gunung Rinjani terkenal dengan pesona alamnya yang memiliki puncak bernama Puncak Dewi Anjani, dan danau kawah yang bernama Segara Anak",
     "reviews": [],
 
     "photo": "/tour-images/tour-img03.jpg",
     "featured": true
   },
   {
-    "title": "Beautiful Sunrise, Thailand",
-    "city": "Phuket",
-    "address": "Somewhere in Thailand",
+    "title": "Taman Nasional Bunaken",
+    "city": "Sulawesi Utara",
+    "address": "Manado",
     "distance": 500,
-    "price": 99,
+    "price": 880000,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Taman Nasional Bunaken adalah taman laut yang terletak di Sulawesi Utara, Indonesia. Taman ini terletak di Segitiga Terumbu Karang yang menjadi habitat bagi 390 spesies terumbu karang[2] dan juga berbagai spesies ikan, moluska, reptil, dan mamalia laut.",
     "reviews": [],
 
     "photo": "/tour-images/tour-img04.jpg",
@@ -54,79 +54,79 @@
   {
     "title": "Nusa Pendia Bali, Indonesia",
     "city": "Bali",
-    "address": "Somewhere in Indonesia",
+    "address": "Klungkung",
     "distance": 500,
-    "price": 99,
+    "price": 770000,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Nusa Penida adalah sebuah pulau yang terletak di dekat pulau Bali tenggara Indonesia dan sebuah kabupaten di Kabupaten Klungkung yang mencakup pulau kecil tetangga Nusa Lembongan dan dua belas pulau yang lebih kecil lagi. Selat Badung memisahkan pulau dan Bali",
     "reviews": [],
 
     "photo": "/tour-images/tour-img05.jpg",
     "featured": true
   },
   {
-    "title": "Cherry Blossoms Spring",
-    "city": "Tokyo",
-    "address": "Somewhere in Japan",
+    "title": "Wakatobi",
+    "city": "Sulawesi Tenggara",
+    "address": "Laut Banda",
     "distance": 500,
-    "price": 99,
+    "price": 700000,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Dengan luas mencapai 13.900 km2, tujuan wisata terkenal asal Indonesia ini memiliki tak kurang dari 112 jenis terumbu karang yang bersimbiosis dengan ikan-ikan bawah laut sehingga menciptakan panorama bawah laut yang tiada tanding",
     "reviews": [],
 
     "photo": "/tour-images/tour-img06.jpg",
     "featured": true
   },
   {
-    "title": "Holmen Lofoten, France",
-    "city": "Paris",
-    "address": "Somewhere in France",
+    "title": "Raja Ampat",
+    "city": "Papua Barat",
+    "address": "Waigeo",
     "distance": 500,
-    "price": 99,
+    "price": 900000,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Surga dunia di Indonesia selanjutnya adalah kepulauan Raja Ampat yang terletak di Papua Barat dengan kekayaan laut terlengkap di bumi.",
     "reviews": [],
 
     "photo": "/tour-images/tour-img07.jpg",
     "featured": true
   },
   {
-    "title": "Snowy Mountains, Thailand",
-    "city": "Bangkok",
-    "address": "Somewhere in Thailand",
+    "title": "Candi Borobudur",
+    "city": "Jawa Tengah",
+    "address": "magelang",
     "distance": 500,
-    "price": 99,
+    "price": 200000,
     "maxGroupSize": 8,
-    "desc": "this is the description",
-    "reviews": [],
-
-    "photo": "/tour-images/tour-img03.jpg",
-    "featured": true
-  },
-  {
-    "title": "Jaflong, Sylhet",
-    "city": "Sylhet",
-    "address": "Somewhere in Sylhet",
-    "distance": 100,
-    "price": 99,
-    "maxGroupSize": 5,
-    "desc": "this is the description",
+    "desc": "Salah satu ikon wisata budaya Indonesia yang mendunia lainnya adalah Candi Borobudur. Sebagai candi Budha terbesar di dunia dengan luas tak kurang dari 123 X 123 meter, candi yang dibangun pada masa kerajaan Mataram kuno ini merupakan warisan budaya dan sejarah Indonesia yang terkenal akan arsitektur yang memukau",
     "reviews": [],
 
     "photo": "/tour-images/tour-img08.jpg",
-    "featured": false
+    "featured": true
   },
   {
-    "title": "Cox's Bazar Sea Beach",
-    "city": "Chittagong",
-    "address": "Somewhere in Chittagong",
-    "distance": 500,
-    "price": 99,
-    "maxGroupSize": 8,
-    "desc": "this is the description",
+    "title": "Candi Prambanan",
+    "city": "Yogyakarta",
+    "address": "jl.yogyakarta no 16",
+    "distance": 400,
+    "price": 600000,
+    "maxGroupSize": 5,
+    "desc": "adalah kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9 masehi. Candi ini dipersembahkan untuk Trimurti, tiga dewa utama Hindu yaitu Brahma sebagai dewa pencipta",
     "reviews": [],
 
     "photo": "/tour-images/tour-img09.jpg",
+    "featured": false
+  },
+  {
+    "title": "Pantai Pangandaran",
+    "city": "Pangandaran",
+    "address": "kecamatan parigi",
+    "distance": 500,
+    "price": 500000,
+    "maxGroupSize": 8,
+    "desc": "Pantai Pangandaran merupakan sebuah objek wisata andalan Kabupaten Pangandaran yang terletak di sebelah tenggara Jawa Barat, tepatnya di Desa Pangandaran dan Pananjung, sekitar 222 km dari selatan Bandung",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img10.jpg",
     "featured": false
   }
 ]

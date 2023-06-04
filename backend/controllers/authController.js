@@ -62,7 +62,7 @@ export const login = async (req, res) => {
         });
     };
 
-    const {password,  ...rest} = user._doc
+    const {password, role, ...rest} = user._doc
   
     // buat jwt token
     const token = jwt.sign({
@@ -79,8 +79,10 @@ export const login = async (req, res) => {
         token,
         success:true,
         data:'successfully login', data:{
-            ...rest
+            ...rest,
+            role
         },
+        
     });
 
       

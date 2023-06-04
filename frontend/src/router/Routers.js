@@ -14,6 +14,7 @@ import Notfound from "../pages/Notfound";
 import About from "../pages/About";
 import TourList from "../components/Crud/TourList";
 import AddTour from "../components/Crud/AddTour";
+import EditTour from "../components/Crud/EditTour";
 
 function Routers() {
   return (
@@ -27,6 +28,7 @@ function Routers() {
       <Route path="/about" element={<About />} />
       <Route path="/list" element={<TourList />} />
       <Route path="/add" element={<AddTour />} />
+      <Route path="/edit/:id" element={<EditTour />} />
 
       <Route path="/thank-you" element={<ThankYou />} />
       <Route path="/tours/search" element={<SearchResultList />} />
