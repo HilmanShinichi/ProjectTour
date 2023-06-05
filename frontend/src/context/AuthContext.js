@@ -22,21 +22,22 @@ const AuthReducer = (state, action) => {
                 loading:false,
                 error:null, 
                 }
+                
             case 'LOGIN_FAILURE':   
                 return{
-                    user:null,
+                user:null,
                 loading:false,
                 error:action.payload, 
                 }
             case 'REGISTER_SUCCESS':   
                 return{
-                    user:null,
+                user:null,
                 loading:false,
                 error:null, 
                 }
             case 'LOGOUT':   
                 return{
-                    user:null,
+                user:null,
                 loading:false,
                 error:null, 
                 }
@@ -44,6 +45,7 @@ const AuthReducer = (state, action) => {
             default :
             return state
     }
+   
 }   
 
 export const AuthContextProvider =({children}) => {

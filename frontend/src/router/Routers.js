@@ -15,6 +15,7 @@ import About from "../pages/About";
 import TourList from "../components/Crud/TourList";
 import AddTour from "../components/Crud/AddTour";
 import EditTour from "../components/Crud/EditTour";
+import Payment from "../components/Payment/Payment";
 
 function Routers() {
   return (
@@ -26,13 +27,12 @@ function Routers() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/about" element={<About />} />
-      <Route path="/list" element={<TourList />} />
+      <Route path="/list/:id" element={<TourList />} />
       <Route path="/add" element={<AddTour />} />
       <Route path="/edit/:id" element={<EditTour />} />
-
+      <Route path="/payment" element={<Payment />} />
       <Route path="/thank-you" element={<ThankYou />} />
       <Route path="/tours/search" element={<SearchResultList />} />
-
       <Route path="*" element={<Notfound />} />
     </Routes>
   );

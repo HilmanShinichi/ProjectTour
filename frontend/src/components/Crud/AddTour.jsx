@@ -42,7 +42,7 @@ const AddTour = () => {
             },{
               withCredentials:true
             });
-            navigate("/list");
+            navigate("/list/0");
           }
 
      

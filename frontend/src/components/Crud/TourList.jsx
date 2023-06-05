@@ -4,10 +4,11 @@ import { Button } from "reactstrap";
 import { AuthContext } from "../../context/AuthContext";
 
 import { BASE_URL } from "../../utils/config";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const TourList = () => {
   const { user } = useContext(AuthContext);
+  const {id} = useParams()
 
   const [tours, setTour] = useState([]);
 
@@ -17,7 +18,7 @@ const TourList = () => {
   const navigate = useNavigate();
 
   const getTours = async () => {
-    const res = await axios.get(`${BASE_URL}/tours?page=1`);
+    const res = await axios.get(`${BASE_URL}/tours?page=${id}`);
     setTour(res.data.data);
   };
 
@@ -39,7 +40,6 @@ const TourList = () => {
   return (
     <div className="container">
       <Button className="btn primary__btn bg-success mt-4" href="/add">
-        {" "}
         Add new tour
       </Button>
       <table className="table mt-5">
@@ -66,12 +66,12 @@ const TourList = () => {
               <th>{tour.maxGroupSize}</th>
               <th>{tour.photo}</th>
               <th>
-                <Button href={`edit/${tour._id}`} className="btn primary__btn">
+                <Link to={`/edit/${tour._id}`} className="btn primary__btn">
                   Edit
-                </Button>
+                </Link>
                 <Button
                   onClick={() => deleteTour(tour._id)}
-                  className="btn primary__btn bg-danger"
+                  className="btn primary__btn bg-danger ms-2"
                 >
                   Delete
                 </Button>
@@ -80,6 +80,8 @@ const TourList = () => {
           ))}
         </tbody>
       </table>
+      <Button href='/list/0'>1</Button>
+      <Button href='/list/1' className="ms-2">2</Button>
     </div>
   );
 };

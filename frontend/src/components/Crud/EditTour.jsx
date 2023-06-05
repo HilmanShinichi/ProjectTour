@@ -31,7 +31,6 @@ useEffect(() => {
     const res = await axios.get(`${BASE_URL}/tours/${id}`)
     setTitle(res.data.data.title)
     setCity(res.data.data.city)
-    console.log(res.data.data.city)
     setAddress(res.data.data.address)
     setDistance(res.data.data.distance)
     setPhoto(res.data.data.photo)
@@ -61,7 +60,7 @@ useEffect(() => {
             },{
               withCredentials:true
             });
-            navigate("/list");
+            navigate("/list/0");
           }
 
      
