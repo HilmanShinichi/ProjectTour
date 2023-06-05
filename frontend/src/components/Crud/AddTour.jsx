@@ -42,6 +42,7 @@ const AddTour = () => {
             },{
               withCredentials:true
             });
+            alert('add tour success')
             navigate("/list/0");
           }
 

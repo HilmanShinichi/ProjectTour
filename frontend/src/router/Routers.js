@@ -16,6 +16,7 @@ import TourList from "../components/Crud/TourList";
 import AddTour from "../components/Crud/AddTour";
 import EditTour from "../components/Crud/EditTour";
 import Payment from "../components/Payment/Payment";
+import ListPayment from "../components/Payment/ListPayment";
 
 function Routers() {
   return (
@@ -31,6 +32,7 @@ function Routers() {
       <Route path="/add" element={<AddTour />} />
       <Route path="/edit/:id" element={<EditTour />} />
       <Route path="/payment" element={<Payment />} />
+      <Route path="/listpayment" element={<ListPayment />} />
       <Route path="/thank-you" element={<ThankYou />} />
       <Route path="/tours/search" element={<SearchResultList />} />
       <Route path="*" element={<Notfound />} />

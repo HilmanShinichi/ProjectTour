@@ -8,6 +8,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { BASE_URL } from "../../utils/config";
 
 const EditTour = () => {
+  const {id} = useParams()
  
     const { user } = useContext(AuthContext);
  
@@ -21,13 +22,16 @@ const EditTour = () => {
   const [maxGroupSize, setMaxGroupSize] = useState("");
 
   const navigate = useNavigate();
-  const {id} = useParams()
+ 
 
 useEffect(() => {
   getToursById();
-},[]);
+},);
+
+
 
   const getToursById = async()=>{
+    
     const res = await axios.get(`${BASE_URL}/tours/${id}`)
     setTitle(res.data.data.title)
     setCity(res.data.data.city)
