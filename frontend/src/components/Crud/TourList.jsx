@@ -14,7 +14,7 @@ const TourList = () => {
 
   useEffect(() => {
     getTours();
-  },);
+  },[]);
   const navigate = useNavigate();
 
   const getTours = async () => {

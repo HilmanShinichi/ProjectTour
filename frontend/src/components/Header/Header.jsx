@@ -38,7 +38,7 @@ const Header = ({ direction, ...args }) => {
   const navigate = useNavigate();
   const { user, dispatch } = useContext(AuthContext);
 
-  console.log(user);
+
 
   const logout = () => {
     dispatch({ type: "LOGOUT" });

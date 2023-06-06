@@ -75,6 +75,7 @@ export const getSingleTour = async (req, res) => {
   const id = req.params.id;
 
   try {
+    //populate untuk mengambil data dengan lengkap
     const tour = await Tour.findById(id).populate('reviews');
 
     res.status(200).json({
@@ -115,7 +116,10 @@ export const getAllTour = async (req, res) => {
 
 //get tour by search
 export const getTourBySearch = async (req, res) => {
-  const city = new RegExp(req.query.city, "i"); // disini 'i' artinya case sensitive
+  //"i" adalah parameter opsional yang menandakan pencarian yang tidak sensitif terhadap huruf besar kecil. Jadi, ekspresi reguler akan mencocokkan string dalam regex dengan atau tanpa perbedaan huruf besar kecil.
+
+
+  const city = new RegExp(req.query.city, "i"); 
   const distance = parseInt(req.query.distance);
   const maxGroupSize = parseInt(req.query.maxGroupSize);
 
@@ -142,7 +146,6 @@ export const getTourBySearch = async (req, res) => {
 
 // get featured tour
 export const getFeaturedTour = async (req, res) => {
-
     try {
       const tours = await Tour.find({featured:true}).populate('reviews').limit(8);
       res.status(200).json({

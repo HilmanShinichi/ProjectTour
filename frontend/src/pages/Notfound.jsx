@@ -1,9 +1,25 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Button } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import './../styles/notfound.css'
+import axios from 'axios'
+import { BASE_URL } from '../utils/config'
+
 
 const Notfound = () => {
+  const [notfound, setNotfound] = useState([]);
+
+  useEffect(() => {
+    getNotfound();
+  },[]);
+
+  const getNotfound = async () => {
+    const res = await axios.get(`${BASE_URL}/notfound`);
+    setNotfound(res.data.data);
+  };
+
+
+
   return (
     <div class="notfound__wrap-error">
     <div class="d-flex align-items-center h-100">
