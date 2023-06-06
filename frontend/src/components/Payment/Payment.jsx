@@ -37,6 +37,7 @@ export const Payment = () => {
                 },{
                   withCredentials:true
                 });
+                alert('payment success')
                 navigate("/thank-you");
               }
     

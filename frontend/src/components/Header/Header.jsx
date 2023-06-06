@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext,useState } from "react";
+import React, { useEffect, useRef, useContext, useState } from "react";
 import { Container, Row, Button } from "reactstrap";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import {
@@ -6,8 +6,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-} from 'reactstrap';
-import PropTypes from 'prop-types';
+} from "reactstrap";
+import PropTypes from "prop-types";
 
 import logo from "../../assets/images/logo.png";
 import "./Header.css";
@@ -29,15 +29,16 @@ const nav__links = [
 ];
 
 const Header = ({ direction, ...args }) => {
-
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
-  
+
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const navigate = useNavigate();
   const { user, dispatch } = useContext(AuthContext);
+
+  console.log(user);
 
   const logout = () => {
     dispatch({ type: "LOGOUT" });
@@ -97,16 +98,31 @@ const Header = ({ direction, ...args }) => {
               <div className="nav_btns d-flex align-items-center gap-4">
                 {user ? (
                   <>
-                   <div className="d-flex p-5">
-      <Dropdown isOpen={dropdownOpen} toggle={toggle} direction={direction}>
-        <DropdownToggle caret>{user.username}</DropdownToggle>
-        <DropdownMenu {...args}>
-          <DropdownItem header>User</DropdownItem>
-          <DropdownItem ><Link to={'/list/0'} style={{textDecoration: "none", color:"black"}}>Dashboard</Link></DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    </div>
-                    
+                    <div className="d-flex p-5">
+                      <Dropdown
+                        isOpen={dropdownOpen}
+                        toggle={toggle}
+                        direction={direction}
+                      >
+                        <DropdownToggle caret>{user.username}</DropdownToggle>
+                        <DropdownMenu
+                          {...args}
+                          style={{
+                            display: user.username === "user" ? "none" : "",
+                          }}
+                        >
+                          <DropdownItem header>{user.username}</DropdownItem>
+                          <DropdownItem>
+                            <Link
+                              to={"/list/0"}
+                              style={{ textDecoration: "none", color: "black" }}
+                            >
+                              Dashboard
+                            </Link>
+                          </DropdownItem>
+                        </DropdownMenu>
+                      </Dropdown>
+                    </div>
 
                     <Button className="btn btn-dark" onClick={logout}>
                       Logout

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { BASE_URL } from "../../utils/config";
 import { AuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +11,7 @@ export const ListPayment = () => {
 
   useEffect(() => {
     getPayment();
-  },[]);
+  }, []);
 
   const getPayment = async () => {
     try {
@@ -24,14 +23,18 @@ export const ListPayment = () => {
           withCredentials: true,
         });
         setPayment(res.data.data);
-        
       }
-    } catch (error) {}
+    } catch (error) {
+      alert('anda bukan admin')
+      navigate('/home')
+    }
   };
-
 
   return (
     <div className="container mt-5">
+      <div className="thank__you">
+        <h1 className="mb-3 fw-semibold">History Payment</h1>
+      </div>
       <table class="table">
         <thead className="bg-secondary">
           <tr>

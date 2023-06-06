@@ -79,10 +79,9 @@ export const login = async (req, res) => {
         token,
         success:true,
         data:'successfully login', data:{
-            ...rest,
-            role
+            ...rest,  
         },
-        
+         role
     });
 
       

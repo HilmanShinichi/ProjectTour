@@ -42,8 +42,8 @@ const TourList = () => {
       <Button className="btn primary__btn bg-success mt-4" href="/add">
         Add new tour
       </Button>
-      <Button className="btn primary__btn bg-success mt-4 ms-3" href="/listpayment">
-        Add new tour
+      <Button className="btn primary__btn bg-info mt-4 ms-3" href="/listpayment">
+        History Payment
       </Button>
       <table className="table mt-5">
         <thead className="bg-light">

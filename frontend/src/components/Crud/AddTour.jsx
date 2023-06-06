@@ -48,8 +48,8 @@ const AddTour = () => {
 
      
     } catch (error) {
-      alert("Please sign in");
-      navigate("/login");
+      alert("is not admin");
+      navigate("/register");
     }
   };
 
